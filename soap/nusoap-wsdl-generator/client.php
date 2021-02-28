@@ -9,7 +9,6 @@
     // Create client object
     $client = new nusoap_client($wsdl, 'wsdl');
 
-    echo $client;
     // Call the hello method
     $result1=$client->call('hello', array('username'=>'Muhammad Ariq Basyar'));
     // $result1 = $client->call('NumberToWords', array("a" => '21'));
