@@ -3,8 +3,8 @@
     // turn off WSDL caching
     ini_set("soap.wsdl_cache_enabled","0");
 
-    function mul($a, $b) {
-        return $a * $b;
+    function greet($name) {
+        return "hello " . $name;
     }
 
     // initialize SOAP Server
@@ -12,7 +12,7 @@
     $server=new SoapServer(NULL, $params);
 
     // register available functions
-    $server->addFunction('mul');
+    $server->addFunction('greet');
 
     // start handling requests
     $server->handle();
