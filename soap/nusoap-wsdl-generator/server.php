@@ -30,7 +30,7 @@
     // Use the request to invoke the service
     $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA)
         ? $HTTP_RAW_POST_DATA : '';
-    // $server->service(file_get_contents('php://input'));
-    $server->service($HTTP_RAW_POST_DATA);
+    $server->service(file_get_contents('php://input')); // php 7
+    // $server->service($HTTP_RAW_POST_DATA);
 
 ?>
